@@ -13,5 +13,12 @@ class User(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(250), nullable=False)
 
+    @property
+    def serialize(self):
+        return{
+            'id': self.id,
+            'name': self.name
+        }
+
 engine = create_engine('postgresql://fb:password@localhost/facebook')
 Base.metadata.create_all(engine)
