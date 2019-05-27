@@ -30,13 +30,17 @@ def homepage():
 def newCategory():
     if request.method == 'POST':
         print('start')
-        print(request.form['firstName'])
+        print(request.form['name'])
+        print(request.form['lastName'])
         print('stage1')
-        newName = request.form['firstName']
-        print("stage1")
+        newName = request.form['lastName']
+        print("stage2")
         newUser = User(name=newName)
+        print("stage3")
         session.add(newUser)
+        print("stage4")
         session.commit()
+        print("stage5")
         return redirect(url_for('userJSON'))
 
     return redirect(url_for('homepage'))
@@ -44,4 +48,4 @@ def newCategory():
 if __name__ == '__main__':
     app.jinja_env.auto_reload = True
     app.config['TEMPLATES_AUTO_RELOAD'] = True
-    app.run(host='0.0.0.0', port=8000)
+    app.run(host='0.0.0.0', port=8000, debug=True)
