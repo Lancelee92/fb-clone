@@ -11,13 +11,19 @@ class User(Base):
     __tablename__ = 'user'
 
     id = Column(Integer, primary_key=True)
-    name = Column(String(250), nullable=False)
+    firstname = Column(String(250), nullable=False)
+    lastname = Column(String(250), nullable=False)
+    email = Column(String(250), nullable=False)
+    password = Column(String(250), nullable=False)
 
     @property
     def serialize(self):
         return{
             'id': self.id,
-            'name': self.name
+            'firstname': self.firstname,
+            'lastname': self.lastname,
+            'email': self.email,
+            'password': self.password
         }
 
 engine = create_engine('postgresql://fb:password@localhost/facebook')
