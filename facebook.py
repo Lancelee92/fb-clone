@@ -33,9 +33,13 @@ def newCategory():
         print(request.form['name'])
         print(request.form['lastName'])
         print('stage1')
-        newName = request.form['lastName']
+        fname = request.form['name']
+        lname = request.form['lastName']
+        email = request.form['email']
+        password = request.form['password']
+
         print("stage2")
-        newUser = User(name=newName)
+        newUser = User(firstname=fname, lastname=lname, email=email, password=password)
         print("stage3")
         session.add(newUser)
         print("stage4")
