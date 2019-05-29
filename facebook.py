@@ -29,22 +29,15 @@ def homepage():
 @app.route('/user/new', methods=['POST'])
 def newCategory():
     if request.method == 'POST':
-        print('start')
-        print(request.form['name'])
-        print(request.form['lastName'])
-        print('stage1')
+        
         fname = request.form['name']
         lname = request.form['lastName']
         email = request.form['email']
         password = request.form['password']
 
-        print("stage2")
         newUser = User(firstname=fname, lastname=lname, email=email, password=password)
-        print("stage3")
         session.add(newUser)
-        print("stage4")
         session.commit()
-        print("stage5")
         return redirect(url_for('userJSON'))
 
     return redirect(url_for('homepage'))
