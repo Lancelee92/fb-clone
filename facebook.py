@@ -42,6 +42,13 @@ def newCategory():
 
     return redirect(url_for('homepage'))
 
+@app.route('/login', methods=['POST'])
+def login():
+    if request.method == 'POST':
+        return redirect(url_for('homepage'))
+
+    return redirect(url_for('homepage'))
+
 if __name__ == '__main__':
     app.jinja_env.auto_reload = True
     app.config['TEMPLATES_AUTO_RELOAD'] = True
