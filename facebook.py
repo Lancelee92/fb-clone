@@ -50,6 +50,11 @@ def login():
 
     return redirect(url_for('homepage'))
 
+@app.route('/logout', methods=['POST'])
+def logout():
+    
+    return redirect(url_for('homepage'))
+
 if __name__ == '__main__':
     app.jinja_env.auto_reload = True
     app.config['TEMPLATES_AUTO_RELOAD'] = True
