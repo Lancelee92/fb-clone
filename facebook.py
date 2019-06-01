@@ -3,6 +3,7 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 from database_setup import User, Base
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from flask import session as login_session
 
 import httplib2
 import json
