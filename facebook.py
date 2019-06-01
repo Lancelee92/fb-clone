@@ -49,7 +49,9 @@ def login():
         email = request.form['password']
         password = request.form['password']
         
-        user = getUserID(email)
+        user-id = getUserID(email)
+        if not user_id
+            redirect(url_for('login'))
         return redirect(url_for('homepage'))
 
     return redirect(url_for('homepage'))
