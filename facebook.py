@@ -49,6 +49,7 @@ def login():
         email = request.form['password']
         password = request.form['password']
         
+        user = session.query(User).filter_by(email=email)
         return redirect(url_for('homepage'))
 
     return redirect(url_for('homepage'))
