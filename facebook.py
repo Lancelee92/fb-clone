@@ -43,7 +43,7 @@ def newCategory():
 
     return redirect(url_for('homepage'))
 
-@app.route('/login', methods=['POST'])
+@app.route('/login', methods=['GET','POST'])
 def login():
     if request.method == 'POST':
         email = request.form['password']
@@ -56,6 +56,8 @@ def login():
         login_session['userid'] = user_id
         
         return redirect(url_for('homepage'))
+    else:
+        return render_template('login.html')
 
     return redirect(url_for('homepage'))
 
