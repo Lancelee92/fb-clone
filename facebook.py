@@ -50,7 +50,7 @@ def login():
         password = request.form['password']
         
         user_id = getUserID(email)
-        if not user_id
+        if not user_id:
             redirect(url_for('login'))
 
         login_session['userid'] = user_id
