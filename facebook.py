@@ -63,6 +63,7 @@ def login():
 
 @app.route('/logout', methods=['POST'])
 def logout():
+    del login_session['userid']
     
     return redirect(url_for('homepage'))
 
