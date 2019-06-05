@@ -31,6 +31,10 @@ def homepage():
 def posts():
     return render_template('posts.html')
 
+@app.route('/posts/new')
+def newPosts():
+    return redirect(url_for('posts'))
+
 @app.route('/user/new', methods=['POST'])
 def newCategory():
     if request.method == 'POST':
