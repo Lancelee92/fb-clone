@@ -27,6 +27,10 @@ def userJSON():
 def homepage():
     return render_template('homepage.html')
 
+@app.route('/posts')
+def posts():
+    return render_template('posts.html')
+
 @app.route('/user/new', methods=['POST'])
 def newCategory():
     if request.method == 'POST':
