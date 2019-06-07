@@ -15,3 +15,7 @@ A clone of facebook as full stack project.
 #### sqlalchemy
 
 ` create_engine('postgresql://username:password@host:port/database') `
+
+## Run Site
+Run the site with ` python3 facebook.py `
+Browse site at ` http://localhost:8000 `
