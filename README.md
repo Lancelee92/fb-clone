@@ -8,3 +8,6 @@ A clone of facebook as full stack project.
 
 ` sudo service postgresql start `
 2. Start postgresql server
+
+` sudo su - postgres `
+3. Connect postgresql
