@@ -11,3 +11,7 @@ A clone of facebook as full stack project.
 
 ` sudo su - postgres `
 3. Connect postgresql
+
+#### sqlalchemy
+
+` create_engine('postgresql://username:password@host:port/database') `
