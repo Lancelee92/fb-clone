@@ -16,6 +16,9 @@ A clone of facebook as full stack project.
 
 ` create_engine('postgresql://username:password@host:port/database') `
 
+## Login
+Note: Google onSignIn function not working with adblock/ghostery
+
 ## Run Site
 Run the site with ` python3 facebook.py `
 Browse site at ` http://localhost:8000 `
