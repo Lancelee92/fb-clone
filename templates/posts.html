@@ -8,14 +8,13 @@
 
 <script>
     $(document).ready(function(){ 
-      $('.emojiable-question').emojiPicker({
-        height: '300px',
-        width:  '450px'
+      $('#picker').emojiPicker({
+        button: false
       });
   
-      $('#trigger').click(function(e) {
+      $('#picker').click(function(e) {
         e.preventDefault();
-        $('#text').emojiPicker('toggle');
+        $('#picker').emojiPicker('toggle');
       });
 
      })
@@ -28,11 +27,9 @@
           <textarea style="resize:none" class="form-control emojiable-question" rows="4" id="text" name="text" placeholder="What's on your mind?"></textarea>
           <label class="badge badge-info" for="image_uploads">image</label>
           <input type="file" id="image_uploads" name="image_uploads" accept="image/png, image/jpeg" multiple hidden>
-                 
+          <a id="picker" class="badge badge-info">Emoji</a>       
           <button type="submit" class="btn btn-submit">Submit</button>
         </form>
-        <!-- <label id="picker" class="badge badge-info picker">Pick An Emoji</label>  -->
-        <button id="picker">pick me</button>
       </div>
       <div class="col-lg-8 col-md-10 mx-auto">
 
