@@ -38,7 +38,7 @@
 <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-        <form>
+        <form action="{{url_for('newPosts')}}">
           <textarea style="resize:none" class="form-control emojiable" rows="4" id="text" name="text" placeholder="What's on your mind?"></textarea>
           <img src="" id="upload-img-tag" width="200px"/>
           <label style="cursor:pointer;" class="badge badge-info" for="image_uploads">image</label>
