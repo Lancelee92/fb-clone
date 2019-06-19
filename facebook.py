@@ -31,7 +31,7 @@ def homepage():
 def posts():
     return render_template('posts.html')
 
-@app.route('/posts/new')
+@app.route('/posts/new', method=['POST'])
 def newPosts():
     return redirect(url_for('posts'))
 
