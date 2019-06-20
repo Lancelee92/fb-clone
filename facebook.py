@@ -33,6 +33,10 @@ def posts():
 
 @app.route('/posts/new', method=['POST'])
 def newPosts():
+
+    if request.method == 'POST':
+        strText = request.form['text']
+
     return redirect(url_for('posts'))
 
 @app.route('/user/new', methods=['POST'])
