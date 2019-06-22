@@ -31,6 +31,8 @@ class Post(Base):
 
     text = Column(String(500), nullable=False)
     image = Column(String(250), nullable=False)
+    user_id = Column(Integer, ForeignKey('user.id'))
+    user = relationship(User)
 
 engine = create_engine('postgresql://fb:password@localhost/facebook')
 Base.metadata.create_all(engine)
