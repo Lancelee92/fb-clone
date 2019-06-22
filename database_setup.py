@@ -30,7 +30,7 @@ class Post(Base):
     __tablename__ = 'post'
 
     text = Column(String(500), nullable=False)
-    
+    image = Column(String(250), nullable=False)
 
 engine = create_engine('postgresql://fb:password@localhost/facebook')
 Base.metadata.create_all(engine)
