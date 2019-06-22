@@ -25,6 +25,9 @@ class User(Base):
             'email': self.email,
             'password': self.password
         }
+    
+class Post(Base):
+    __tablename__ = 'post'
 
 engine = create_engine('postgresql://fb:password@localhost/facebook')
 Base.metadata.create_all(engine)
