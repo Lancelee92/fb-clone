@@ -31,7 +31,7 @@ def homepage():
 def posts():
     return render_template('posts.html')
 
-@app.route('/posts/new', method=['POST'])
+@app.route('/posts/new', methods=['POST'])
 def newPosts():
 
     if request.method == 'POST':
