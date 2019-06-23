@@ -29,6 +29,7 @@ class User(Base):
 class Post(Base):
     __tablename__ = 'post'
 
+    id = Column(Integer, primary_key=True)
     text = Column(String(500), nullable=False)
     image = Column(String(250), nullable=False)
     user_id = Column(Integer, ForeignKey('user.id'))
