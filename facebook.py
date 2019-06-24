@@ -37,6 +37,8 @@ def newPosts():
     if request.method == 'POST':
         strText = request.form['text']
         strImage = request.form['image_uploads']
+        print(strText)
+        print(strImage)
         return redirect(url_for('posts'))
 
     return redirect(url_for('posts'))
