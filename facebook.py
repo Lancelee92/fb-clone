@@ -64,7 +64,8 @@ def login():
     if request.method == 'POST':
         email = request.form['password']
         password = request.form['password']
-        
+        print(email)
+        print(password)
         user_id = getUserID(email)
         if not user_id:
             redirect(url_for('login'))
